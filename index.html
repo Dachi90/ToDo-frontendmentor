@@ -2,35 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Todo app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  Todo
+<div class="wrapper-all">
+  <header class="header">
+    <div class="header-container">
+      <h1 class="title">TODO</h1>
+      <img class="icon-mode" src="/images/icon-sun.svg" alt="light mode">
+    </div>
+  </header>
 
-  <!-- Add dynamic number --> items left
+  <main class="main">
+    <div class="new-todo">
+        <div class="check-box"></div>
+        <input class="input" type="text"  id="create-todo" placeholder="Create a new todo...">
+    </div>
+    <div class="todo-list">
+      <div class="list-items"></div>
+      <div class="list-options">
+        <p class="items-count">0 items left</p>
+        <button class="buttons clear-items">Clear items</button>
+      </div>
+    </div>
+    <div class="list-filter">
+      <button class="buttons all">All</button>
+      <button class="buttons active">Active</button>
+      <button class="buttons completed">Completed</button>
+    </div>
+  </main>
 
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
-
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
+  </footer>
+</div>
+
+<template id="item-template">
+<div class="item">
+    <div class="check-box"><img ></div>
+    <div class="item-text">hola</div>
+    <img class="delate"/>
+</div>
+</template>
+
+<!-- <temaplate>
+  <div class="item">
+    <div class="check-box item-check"><img src="/images/icon-check.svg" alt=""></div>
+    <div class="item-text">hola</div>
+    <div class="delate">X</div>
   </div>
+</temaplate> -->
+  <script src="js/script.js"></script>
 </body>
 </html>

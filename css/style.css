@@ -1,0 +1,163 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: hsl(235, 21%, 11%);
+}
+
+.wrapper-all {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  justify-content: center;
+}
+
+/* Header */
+.header {
+  grid-column: 1/2;
+  grid-row: 1/4;
+  background-image: url("/images/bg-mobile-dark.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-container {
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  color: white;
+  letter-spacing: 0.6rem;
+}
+
+/* Main */
+
+.main {
+  grid-column: 1/2;
+  grid-row: 3/12;
+}
+
+.new-todo {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: hsl(235, 24%, 19%);
+  border-radius: 5px;
+  padding: 0.6rem;
+  display: flex;
+}
+
+.check-box {
+  width: 20px;
+  height: 20px;
+  border: 1px solid hsl(237, 14%, 26%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.input {
+  background-color: hsl(235, 24%, 19%);
+  outline: none;
+  border: none;
+  width: 100%;
+  color: hsl(234, 39%, 85%);
+  margin-left: 1rem;
+}
+.todo-list {
+  margin-top: 1rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: hsl(235, 24%, 19%);
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  color: hsl(234, 11%, 52%);
+}
+.list-item {
+}
+
+.item {
+  display: flex;
+  border-bottom: 1px solid hsl(237, 14%, 26%);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.check-box img {
+  width: 85%;
+}
+
+.item-check {
+  background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-text {
+  margin-left: 1rem;
+  width: 90%;
+}
+
+.delate {
+  cursor: pointer;
+}
+
+.list-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.list-filter {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: hsl(235, 24%, 19%);
+  padding: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  border: 0;
+  outline: 0;
+  background: 0;
+  color: hsl(234, 11%, 52%);
+}
+.buttons:hover {
+  color: hsl(234, 39%, 85%);
+}
+
+/* Footer */
+
+.attribution {
+  grid-column: 1/2;
+  grid-row: 12/13;
+  align-self: end;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
