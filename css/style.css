@@ -13,7 +13,7 @@ body {
 }
 
 .wrapper-all {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(12, 1fr);
@@ -112,10 +112,21 @@ body {
 .item-text {
   margin-left: 1rem;
   width: 90%;
+  transition: all 0.5s ease;
+}
+
+.complete .item-text {
+  text-decoration: line-through;
+  opacity: 0.5;
 }
 
 .delate {
   cursor: pointer;
+}
+
+.delate-animation {
+  transform: translate(-120%);
+  transition: transform 1s cubic-bezier(0.38, -0.29, 0.58, 1);
 }
 
 .list-options {
@@ -147,6 +158,9 @@ body {
 }
 .buttons:hover {
   color: hsl(234, 39%, 85%);
+}
+.button-activated {
+  color: hsl(219deg, 59%, 60%);
 }
 
 /* Footer */
