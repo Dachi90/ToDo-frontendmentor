@@ -145,7 +145,6 @@ function swapMode(e) {
   if (e.target.matches(".fas")) {
     $body.classList.toggle("light-theme");
     if (e.target.matches(".fa-sun")) {
-      console.log("hola");
       $icon.classList.remove("fa-sun");
       $icon.classList.add("fa-moon");
       $header.style.backgroundImage = "url('/images/bg-mobile-light.jpg')";
