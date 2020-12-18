@@ -34,6 +34,7 @@ d.addEventListener("click", (e) => {
   delateItem(e);
   clearCompleted(e);
   filters(e);
+  swapMode(e);
 });
 
 function checkItem(e) {
@@ -134,5 +135,24 @@ function filters(e) {
     actives.forEach((el) => {
       el.style.display = "none";
     });
+  }
+}
+
+function swapMode(e) {
+  let $icon = d.querySelector(".icon-mode"),
+    $body = d.querySelector("body"),
+    $header = d.querySelector(".header");
+  if (e.target.matches(".fas")) {
+    $body.classList.toggle("light-theme");
+    if (e.target.matches(".fa-sun")) {
+      console.log("hola");
+      $icon.classList.remove("fa-sun");
+      $icon.classList.add("fa-moon");
+      $header.style.backgroundImage = "url('/images/bg-mobile-light.jpg')";
+    } else {
+      $icon.classList.remove("fa-moon");
+      $icon.classList.add("fa-sun");
+      $header.style.backgroundImage = "url('/images/bg-mobile-dark.jpg')";
+    }
   }
 }
