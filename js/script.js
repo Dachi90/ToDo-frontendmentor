@@ -141,17 +141,28 @@ function filters(e) {
 function swapMode(e) {
   let $icon = d.querySelector(".icon-mode"),
     $body = d.querySelector("body"),
-    $header = d.querySelector(".header");
+    $header = d.querySelector(".header"),
+    w = window,
+    desktop = "url('/images/bg-desktop-",
+    mobile = "url('/images/bg-mobile-";
   if (e.target.matches(".fas")) {
     $body.classList.toggle("light-theme");
     if (e.target.matches(".fa-sun")) {
       $icon.classList.remove("fa-sun");
       $icon.classList.add("fa-moon");
-      $header.style.backgroundImage = "url('/images/bg-mobile-light.jpg')";
+      if (w.innerWidth > 600) {
+        $header.style.backgroundImage = `${desktop}light.jpg')`;
+      } else {
+        $header.style.backgroundImage = `${mobile}light.jpg')`;
+      }
     } else {
       $icon.classList.remove("fa-moon");
       $icon.classList.add("fa-sun");
-      $header.style.backgroundImage = "url('/images/bg-mobile-dark.jpg')";
+      if (w.innerWidth > 600) {
+        $header.style.backgroundImage = `${desktop}dark.jpg')`;
+      } else {
+        $header.style.backgroundImage = `${mobile}dark.jpg')`;
+      }
     }
   }
 }
